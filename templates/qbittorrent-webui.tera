@@ -1,0 +1,46 @@
+---
+whiskers:
+  version: 2.5.0
+  matrix:
+    - flavor
+    - accent
+  filename: "css/theme-options/catppuccin-{{ flavor.identifier }}-{{ accent }}.css"
+---
+ * {
+            --color-accent-blue: #{{flavor.colors[accent].hex}}; // check box inputs
+            --color-text-blue: #{{red.hex}};
+            --color-text-orange: #{{peach.hex}};
+            --color-text-red: #{{red.hex}};
+            --color-text-green: #{{green.hex}};
+            --color-text-white: #{{text.hex}}; // when background is set
+            --color-text-disabled: #{{red.hex}};
+            --color-text-default: #{{text.hex}};
+            --color-background-blue: #{{flavor.colors[accent].hex}};
+            --color-background-popup: #{{mantle.hex}};
+            --color-background-default: #{{mantle.hex}};
+            --color-background-hover: #{{ surface2 | mod(opacity=0.3) | get(key="hex")}};
+            --color-border-blue: #{{red.hex}};
+            --color-border-default: #{{surface0.hex}};
+        }
+
+        body {
+            background: #{{base.hex}} !important;
+        }
+
+        .selectedFilter span,
+        .selectedFilter a,
+        li.selected a,
+        .torrentsTableContextMenuTarget.selected:not(:hover),
+        .progressbar_dark {
+            color: #{{mantle.hex}} !important;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            color: #{{text.hex}} !important;
+            background-color: #{{surface0.hex}} !important;
+            border-color: var(--color-border-default) !important;
+        }
+

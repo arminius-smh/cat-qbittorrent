@@ -6,6 +6,9 @@ build:
   whiskers templates/resources.tera
   whiskers templates/stylesheet.tera
 
+webui:
+  whiskers templates/qbittorrent-webui.tera
+
 compile:
   #!/usr/bin/env bash
   rcc_version=$(rcc --version)

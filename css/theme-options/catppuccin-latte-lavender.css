@@ -1,0 +1,38 @@
+ * {
+            --color-accent-blue: #7287fd; // check box inputs
+            --color-text-blue: #d20f39;
+            --color-text-orange: #fe640b;
+            --color-text-red: #d20f39;
+            --color-text-green: #40a02b;
+            --color-text-white: #4c4f69; // when background is set
+            --color-text-disabled: #d20f39;
+            --color-text-default: #4c4f69;
+            --color-background-blue: #7287fd;
+            --color-background-popup: #e6e9ef;
+            --color-background-default: #e6e9ef;
+            --color-background-hover: #acb0be4d;
+            --color-border-blue: #d20f39;
+            --color-border-default: #ccd0da;
+        }
+
+        body {
+            background: #eff1f5 !important;
+        }
+
+        .selectedFilter span,
+        .selectedFilter a,
+        li.selected a,
+        .torrentsTableContextMenuTarget.selected:not(:hover),
+        .progressbar_dark {
+            color: #e6e9ef !important;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            color: #4c4f69 !important;
+            background-color: #ccd0da !important;
+            border-color: var(--color-border-default) !important;
+        }
+
